@@ -1,0 +1,123 @@
+/* changemakers.css: Styles specific to the Changemakers page */
+
+/* Changemakers Section */
+.changemakers-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.changemakers-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.card .flag {
+    display: block;
+    margin: 0.5rem auto;
+    width: 80px;
+    height: auto;
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+.card .btn {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.card .btn:hover {
+    background: var(--accent-color);
+}
+
+/* Individual Changemaker Details */
+.changemaker-details {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.changemaker-details img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 1rem;
+}
+
+.changemaker-details h3 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.changemaker-details .flag {
+    display: block;
+    margin: 1rem auto;
+    width: 100px;
+    height: auto;
+}
+
+.changemaker-details p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #555;
+    text-align: justify;
+}

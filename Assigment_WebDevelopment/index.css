@@ -1,0 +1,39 @@
+/* index.css: Styles specific to the home page */
+
+/* Welcome Section */
+.welcome-section {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.welcome-section .btn {
+    font-size: 1rem;
+}
+
+/* Video and Geolocation Section */
+section div {
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    background: #fff;
+    padding: 1rem;
+}
+
+iframe {
+    border-radius: 8px;
+    border: none;
+}
+
+#location {
+    font-size: 1rem;
+    color: var(--secondary-color);
+}
