@@ -1,0 +1,61 @@
+/* Media query za ekranje manje od 768 piksela */
+@media (max-width: 768px) {
+    body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden; /* Sprijecava horizontal scrolling */
+    }
+
+    .navbar {
+        flex-direction: column; /* Stack navbar stavke */
+        align-items: center; /* Centerira navbar content */
+    }
+
+    .navbar-brand {
+        font-size: 1rem; /* Resazja logo and text */
+        display: flex;
+        flex-wrap: wrap; /* Prelomi tekst/logo ako je potrebno */
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand img {
+        max-width: 30px; /* Rezajza logo */
+        margin-right: 5px;
+    }
+
+    .nav-item {
+        margin: 5px 0; /*dodaje prostor izmedju nav items */
+    }
+
+    .carousel-item img {
+        height: auto;
+        max-height: 250px; /* skaliranje slika */
+        object-fit: cover;
+    }
+
+    .gallery-title {
+        font-size: 1.2rem; /* prilagodjava velicinu naslova gallery  */
+        text-align: center;
+    }
+
+    .card {
+        margin-bottom: 20px; /* dodaje razmak izmedju kartica */
+    }
+
+    .card img {
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .container {
+        padding: 10px; /* Smanjuje podstavu za manje ekrane */
+    }
+
+    footer {
+        font-size: 0.8rem; /* Manji footer font */
+        padding: 10px;
+        text-align: center;
+    }
+}

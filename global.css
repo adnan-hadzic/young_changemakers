@@ -1,0 +1,141 @@
+:root {
+    --primary-color: #2a9d8f;
+    --secondary-color: #264653;
+    --accent-color: #e76f51;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --font-family: 'Arial', sans-serif;
+    --font-size: 16px;
+}
+
+/* Tamna tema */
+body.dark-mode {
+    --background-color: #181818;
+    --text-color: #ffffff;
+}
+
+/* Sekcije sa sadržajem u tamnom režimu */
+body.dark-mode section {
+    background-color: #181818; /* Tamna pozadina */
+    color: #ffffff; /* Svetli tekst */
+    border: 1px solid #333; /* Tamni okvir */
+}
+
+/* Globalni reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: var(--font-size);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.navbar .logo img {
+    width: 50px;
+    height: auto;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Dugmad za temu i veličinu fonta */
+.theme-controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button.theme-toggle, button.font-size {
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: var(--accent-color);
+    color: #000;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--secondary-color);
+    color: #fff;
+    font-size: 0.9rem;
+    margin-top: auto;
+}
+
+/* Sekcije */
+section {
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    color: var(--secondary-color);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: var(--accent-color);
+}

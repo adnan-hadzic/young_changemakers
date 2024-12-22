@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - The Initiator of Young Changemakers</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="responsive.css">
+    <style>
+        /* Stilovi za Content Toggle */
+        .toggle-content {
+            display: none; /* Skriven sadržaj po defaultu */
+            margin-top: 1rem;
+        }
+
+        .toggle-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #20B2AA;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .toggle-btn:hover {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="photos/Young.jpg" alt="Young Changemakers Logo">
+            </div>
+            <div class="site-title">
+                <h1>Young Changemakers</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Iniator</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="about-section">
+        <h3>About Adnan Hadžić - The Initiator</h3>
+        <img src="photos/ado.jpg" alt="Adnan Hadžić" class="profile-pic">
+        <p><strong>My name is Adnan Hadžić</strong>, I am 19 years old, from the small town of Ilijaš, near Sarajevo, Bosnia and Herzegovina. I am a student at the International Burch University in Sarajevo. My motivation comes from my own example, seeing myself as an active young person within my local community, through volunteering, civic engagement, and similar activities. My vision is to connect young people across the Balkans, Europe, and the world to create a <strong>better tomorrow</strong>.</p>
+
+        <button class="toggle-btn" onclick="toggleContent()">Show More</button>
+        <div class="toggle-content">
+            <p>This platform is in its early stage, but my goal is to continue working on it to improve everything that can be improved. Many people see me as a leader with a great vision. Young people are the driving force, unfortunately, in our country, we are losing them, and my mission is to be the reason why young people stay in Bosnia and Herzegovina!</p>
+            
+            <p>My personal goal is to help others become leaders in their communities, so they too can contribute to keeping people in Bosnia and Herzegovina. It is important to provide opportunities and engage young people, as that is our future. The RYCO project in Sarajevo last year was the reason why I am even more motivated to succeed with this project.</p>
+            
+            <p>Strengthening the community, expanding networks, and improving this platform might one day turn it into an NGO, which is my ultimate goal, but who knows what the future holds. Stay healthy and engaged!</p>
+        </div>
+
+        <div class="social-links">
+            <p><strong>Follow me:</strong></p>
+            <a href="https://www.linkedin.com/in/adnan-hadzic-" target="_blank">LinkedIn</a> | 
+            <a href="https://www.instagram.com/ad0je" target="_blank">Instagram</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Young Changemakers. All Rights Reserved. Designed by Adnan Hadžić.</p>
+    </footer>
+
+    <script>
+        // JavaScript za Content Toggle
+        function toggleContent() {
+            const content = document.querySelector('.toggle-content');
+            const btn = document.querySelector('.toggle-btn');
+
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+                btn.textContent = "Show Less";
+            } else {
+                content.style.display = "none";
+                btn.textContent = "Show More";
+            }
+        }
+    </script>
+</body>
+</html>

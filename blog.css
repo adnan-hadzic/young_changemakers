@@ -1,0 +1,75 @@
+.blog-section {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.blog-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color); /*  boja naslova iz css varijable   */
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /*  dinamicki broj clanaka ovisno o sirini ekrana   */
+    gap: 2rem;
+}
+
+.card {
+    background: #fff;
+    border: 1px solid var(--secondary-color); /*  tanak border oko stranice   */
+    border-radius: 10px; /*   zaobljenji coskovi  */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*  blaga sjena   */
+    overflow: hidden; /*  ne dozvoljava da sadrzaj prelazi granice straniice   */
+    text-align: center;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /*  animacija za hover efekt   */
+}
+
+.card:hover {
+    transform: translateY(-10px); /*   pomicanje prema gore kod hovera  */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /*  pojacana sjena   */
+}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--secondary-color);
+}
+
+.card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.card .flag {
+    display: block; /*   zastava kao blok element  */
+    margin: 0.5rem auto;
+    width: 50px;
+    height: auto; 
+}
+
+.card .btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none; /*   uklanjanje podcrtavanje teksta  */
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s ease; /*  animacija promjene boje kod hovera   */
+}
+
+.card .btn:hover {
+    background: var(--accent-color); /* promjena boja pozadine kod hovera     */
+}

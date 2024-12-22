@@ -1,0 +1,55 @@
+/* Postojeći stilovi */
+.about-section {
+    text-align: center;  /* Centrira tekst i razmak između sekcija */
+    padding: 2rem;
+}
+
+.about-section h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Boja teksta iz CSS varijable */
+}
+
+.about-section p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+}
+
+.about-section .profile-pic {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: var(--secondary-color); /* Boja linkova iz CSS varijable */
+    font-weight: bold;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease; /* Promena boje s efektom prelaza od 0.3 sekunde */
+}
+
+.social-links a:hover {
+    color: var(--accent-color); /* Kada se pređe mišem preko teksta, promeni se boja linka */
+}
+
+/* Novi stilovi za footer i sadržaj */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Telo zauzima minimum 100% visine ekrana */
+    margin: 0;
+}
+
+main {
+    flex: 1; /* Glavni sadržaj zauzima preostali prostor */
+}
+
+footer {
+    background-color: #34495E; /* Tamnosiva boja */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
