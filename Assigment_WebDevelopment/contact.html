@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Young Changemakers</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="photos/Young.jpg" alt="Young Changemakers Logo">
+            </div>
+            <div class="site-title">
+                <h1>Young Changemakers</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contact-form">
+            <h2>Contact Us</h2>
+            <p>If you have any questions, suggestions, or would like to collaborate, feel free to reach out to us. We would love to hear from you!</p>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Write your message here" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+
+            <div class="additional-contact">
+                <p>You can also contact my supervisor via mail: <a href="mailto:amela.vatres@stu.ibu.edu.ba">amela.vatres@stu.ibu.edu.ba</a></p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Adnan Hadžić</td>
+                            <td><a href="mailto:adnan.hadzic@stu.ibu.edu.ba">adnan.hadzic@stu.ibu.edu.ba</a></td>
+                            <td>Founder</td>
+                        </tr>
+                        <tr>
+                            <td>Amela Vatres</td>
+                            <td><a href="mailto:amela.vatres@stu.ibu.edu.ba">amela.vatres@stu.ibu.edu.ba</a></td>
+                            <td>Supervisor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="extended-contact">
+            <h3>Extended Contact Form</h3>
+            <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" min="18" max="100" placeholder="Enter your age">
+
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="interests">Interests:</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="activism" name="interests" value="activism">Activism</label>
+                    <label><input type="checkbox" id="networking" name="interests" value="networking">Networking</label>
+                    <label><input type="checkbox" id="volunteering" name="interests" value="volunteering">Volunteering</label>
+                </div>
+
+                <label for="role">Are you a:</label>
+                <div class="radio-group">
+                    <label><input type="radio" id="student" name="role" value="student">Student</label>
+                    <label><input type="radio" id="professional" name="role" value="professional">Professional</label>
+                </div>
+
+                <label for="bio">Short Bio:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself"></textarea>
+
+                <label for="file">Upload a file:</label>
+                <input type="file" id="file" name="file">
+
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Young Changemakers. All Rights Reserved. Designed by Adnan Hadžić.</p>
+    </footer>
+</body>
+</html>
