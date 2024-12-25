@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Changemakers</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="responsive.css">
+    <script src="theme.js" defer></script> <!-- JavaScript za Theme Switcher -->
+    <script src="news.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" defer></script>
+    <script src="button.js" defer></script>
+
+
+
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="photos/Young.jpg" alt="Young Changemakers Logo">
+            </div>
+            <div class="site-title">
+                <h1>Young Changemakers</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+            </ul>
+            <div class="theme-controls">
+                <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+                <button class="font-size" onclick="increaseFont()">A+</button>
+                <button class="font-size" onclick="decreaseFont()">A-</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div style="display: flex; justify-content: space-between;">
+                <div style="flex: 1; padding: 10px;">
+                    <h2>Explore Our Mission</h2>
+                    <iframe 
+                        width="100%" 
+                        height="315" 
+                        src="https://www.youtube.com/embed/fJhk_u8bN-Y" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                <div style="flex: 1; padding: 10px;">
+                    <h2>Visit Us</h2>
+                    <p id="location">Finding your location...</p>
+                    <script>
+                        function getLocation() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.getCurrentPosition(showPosition, showError);
+                            } else {
+                                document.getElementById("location").innerHTML = "Geolocation is not supported by this browser.";
+                            }
+                        }
+
+                        function showPosition(position) {
+                            const lat = 43.8646; 
+                            const lon = 18.413;
+                            const googleMapLink = `https://www.google.com/maps?q=${lat},${lon}`;
+                            document.getElementById("location").innerHTML = 
+                                `Our location: <a href="${googleMapLink}" target="_blank">Burch University</a>`; 
+                        }
+
+                        function showError(error) {
+                            switch (error.code) {
+                                case error.PERMISSION_DENIED:
+                                    document.getElementById("location").innerHTML = "User denied the request for Geolocation.";
+                                    break;
+                                case error.POSITION_UNAVAILABLE:
+                                    document.getElementById("location").innerHTML = "Location information is unavailable.";
+                                    break;
+                                case error.TIMEOUT:
+                                    document.getElementById("location").innerHTML = "The request to get user location timed out.";
+                                    break;
+                                case error.UNKNOWN_ERROR:
+                                    document.getElementById("location").innerHTML = "An unknown error occurred.";
+                                    break;
+                            }
+                        }
+
+                        getLocation();
+                    </script>
+                </div>
+            </div>
+        </section>
+
+
+
+        <section id="news-section">
+            <h2>Latest News</h2>
+            <div id="news-container">
+                <p>Loading news...</p>
+            </div>
+        </section>
+        
+
+        <section class="about-section">
+            <h3>About Young Changemakers</h3>
+            <p>Young Changemakers is a platform dedicated to highlighting the inspiring stories of youth from across the Balkans. Our mission is to empower the next generation by sharing their achievements, struggles, and visions for a brighter future.</p>
+        </section>
+
+        <section class="welcome-section">
+            <h2>Welcome to Young Changemakers</h2>
+            <p>Empowering youth across the Balkans to make a difference.</p>
+            <p>Explore our stories!</p>
+            <a href="blog.html" class="btn">Explore Stories</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Young Changemakers. All Rights Reserved. Designed by Adnan Hadžić.</p>
+    </footer>
+</body>
+</html>
